@@ -1,0 +1,49 @@
+//
+//  UnknownTheSister.pch
+//  UnknownTheSister
+//
+//  Created by king少诗 on 16/10/6.
+//  Copyright © 2016年 kingshaoshi. All rights reserved.
+//
+
+/*
+ /Users/kingshaoshi/Xcode/练习范例/UnknownTheSister/UnknownTheSister/classes/Other/UnknownTheSister.pch
+ pch步骤:1.提前编译Pch
+ 
+ 1.存放公用宏
+ 2.存放公用头文件
+ 3.自定义Log
+ */
+
+#import "UIView+frame.h"
+#import "UIBarButtonItem+item.h"
+#import "LINConst.h"
+#import "UIImageView+download.h"
+#import "UIImage+image.h"
+#import "NSDate+LINExtension.h"
+#import "UITextField+placeHolder.h"
+
+// 颜色
+#define LINARGBColor(a, r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:(a)/255.0]
+#define LINColor(r, g, b) LINARGBColor(255, (r), (g), (b))
+#define LINGrayColor(v) LINColor((v), (v), (v))
+#define LINCommentBgColor LINGrayColor(215)
+#define LINRandomColor LINColor(arc4random_uniform(255.0), arc4random_uniform(255.0), arc4random_uniform(255.0))
+// 标签的背景颜色
+#define LINTagBgColor LINColor(70, 142, 243)
+
+
+#define LINAFNWriteToPlist(filename) [responseObject writeToFile:[NSString stringWithFormat:@"/Users/kingshaoshi/Desktop/%@.plist", @#filename] atomically:YES];
+
+// 弱引用
+#define LINWeakSelf __weak typeof(self) weakSelf = self;
+#define LINWeakSelf1 __weak __typeof(self)wself = self; // AFN中的写法
+
+/*************屏幕适配****************/
+#define LINScreenW [UIScreen mainScreen].bounds.size.width
+#define LINScreenH [UIScreen mainScreen].bounds.size.height
+#define iphone6Plus (LINScreenH == 736)
+#define iphone6 (LINScreenH == 667)
+#define iphone5 (LINScreenH == 568)
+#define iphone4 (LINScreenH == 480)
+/*************屏幕适配****************/

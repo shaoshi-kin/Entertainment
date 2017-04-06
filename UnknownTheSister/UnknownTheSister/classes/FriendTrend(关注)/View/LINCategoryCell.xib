@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="category" id="G99-Km-lUz" customClass="LINCategoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="G99-Km-lUz" id="OHp-zG-MOQ">
+                <frame key="frameInset" width="375" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wLQ-lJ-a7C" userLabel="分割线">
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="yGi-yu-YSF"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWE-5f-9S2">
+                        <color key="backgroundColor" red="1" green="0.1055706946" blue="0.047090741899999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="3" id="iDf-vi-J8d"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="wLQ-lJ-a7C" secondAttribute="bottom" constant="-0.5" id="0wa-yQ-R71"/>
+                    <constraint firstAttribute="bottom" secondItem="dWE-5f-9S2" secondAttribute="bottom" constant="0.5" id="3s6-H8-4AK"/>
+                    <constraint firstItem="dWE-5f-9S2" firstAttribute="leading" secondItem="OHp-zG-MOQ" secondAttribute="leading" id="S85-8W-BEh"/>
+                    <constraint firstItem="wLQ-lJ-a7C" firstAttribute="leading" secondItem="OHp-zG-MOQ" secondAttribute="leading" id="b99-7b-dHZ"/>
+                    <constraint firstAttribute="trailing" secondItem="wLQ-lJ-a7C" secondAttribute="trailing" id="lu0-vC-LhE"/>
+                    <constraint firstItem="dWE-5f-9S2" firstAttribute="top" secondItem="OHp-zG-MOQ" secondAttribute="top" id="mjK-lI-zc2"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <connections>
+                <outlet property="selectedIndicator" destination="dWE-5f-9S2" id="wSL-Ke-UQe"/>
+            </connections>
+            <point key="canvasLocation" x="31.5" y="-39"/>
+        </tableViewCell>
+    </objects>
+</document>

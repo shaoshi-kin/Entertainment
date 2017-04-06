@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LINSeeVideoViewController">
+            <connections>
+                <outlet property="videoView" destination="SXj-ow-6Bv" id="iw3-Fj-AqZ"/>
+                <outlet property="view" destination="nI3-Cw-ekM" id="DbI-XS-HvJ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view alpha="0.5" contentMode="scaleToFill" id="nI3-Cw-ekM">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SXj-ow-6Bv">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="250" id="toC-TU-8tv"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7lw-se-dql">
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <state key="normal" title="关闭">
+                        <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="closeButtonClicked:" destination="-1" eventType="touchUpInside" id="qNk-0R-RdC"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="SXj-ow-6Bv" firstAttribute="centerY" secondItem="nI3-Cw-ekM" secondAttribute="centerY" id="9Ak-kN-PUE"/>
+                <constraint firstItem="SXj-ow-6Bv" firstAttribute="leading" secondItem="nI3-Cw-ekM" secondAttribute="leading" id="HtF-ph-vpW"/>
+                <constraint firstAttribute="trailing" secondItem="SXj-ow-6Bv" secondAttribute="trailing" id="bd5-vK-Nbr"/>
+                <constraint firstItem="7lw-se-dql" firstAttribute="top" secondItem="nI3-Cw-ekM" secondAttribute="top" constant="20" id="cWt-3v-lhR"/>
+                <constraint firstItem="7lw-se-dql" firstAttribute="leading" secondItem="nI3-Cw-ekM" secondAttribute="leading" constant="16" id="gqq-te-VPG"/>
+            </constraints>
+            <point key="canvasLocation" x="456" y="94"/>
+        </view>
+    </objects>
+</document>

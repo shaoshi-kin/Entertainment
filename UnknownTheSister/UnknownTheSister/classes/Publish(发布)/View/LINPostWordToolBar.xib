@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="jhV-w3-ib5" customClass="LINPostWordToolBar">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vp0-0e-JUY" userLabel="底部">
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tabbar-light" translatesAutoresizingMaskIntoConstraints="NO" id="y0O-ej-MGy"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJx-G6-Ntn">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="bOx-0B-LWF"/>
+                            </constraints>
+                            <state key="normal" image="post-@N">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pt3-oH-zxV">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="35" id="1EN-oz-0Zo"/>
+                            </constraints>
+                            <state key="normal" image="post-#N">
+                                <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="iJx-G6-Ntn" firstAttribute="leading" secondItem="vp0-0e-JUY" secondAttribute="leading" id="1CY-lo-YE7"/>
+                        <constraint firstAttribute="trailing" secondItem="y0O-ej-MGy" secondAttribute="trailing" id="2su-DK-E7p"/>
+                        <constraint firstItem="y0O-ej-MGy" firstAttribute="leading" secondItem="vp0-0e-JUY" secondAttribute="leading" id="CPA-ET-M56"/>
+                        <constraint firstAttribute="height" constant="35" id="J0A-oK-oIs"/>
+                        <constraint firstAttribute="bottom" secondItem="iJx-G6-Ntn" secondAttribute="bottom" id="Leb-hV-J5n"/>
+                        <constraint firstAttribute="bottom" secondItem="y0O-ej-MGy" secondAttribute="bottom" id="fIA-pX-Scc"/>
+                        <constraint firstItem="iJx-G6-Ntn" firstAttribute="top" secondItem="vp0-0e-JUY" secondAttribute="top" id="mru-Ux-QLm"/>
+                        <constraint firstItem="pt3-oH-zxV" firstAttribute="leading" secondItem="iJx-G6-Ntn" secondAttribute="trailing" id="puh-sK-Yjs"/>
+                        <constraint firstItem="pt3-oH-zxV" firstAttribute="top" secondItem="vp0-0e-JUY" secondAttribute="top" id="s3C-Af-rI5"/>
+                        <constraint firstAttribute="bottom" secondItem="pt3-oH-zxV" secondAttribute="bottom" id="uRl-RF-iVf"/>
+                        <constraint firstItem="y0O-ej-MGy" firstAttribute="top" secondItem="vp0-0e-JUY" secondAttribute="top" id="zJ3-eQ-sj5"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AOb-Og-H1Y" userLabel="顶部">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="BpP-zi-uO1"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AOb-Og-H1Y" secondAttribute="trailing" constant="5" id="JGC-uh-FQN"/>
+                <constraint firstAttribute="bottom" secondItem="vp0-0e-JUY" secondAttribute="bottom" id="RO1-Gy-QMV"/>
+                <constraint firstItem="vp0-0e-JUY" firstAttribute="leading" secondItem="jhV-w3-ib5" secondAttribute="leading" id="bbS-cH-CDf"/>
+                <constraint firstItem="AOb-Og-H1Y" firstAttribute="top" secondItem="jhV-w3-ib5" secondAttribute="top" id="erH-6h-NTK"/>
+                <constraint firstItem="AOb-Og-H1Y" firstAttribute="leading" secondItem="jhV-w3-ib5" secondAttribute="leading" constant="5" id="nOT-q7-wY9"/>
+                <constraint firstAttribute="trailing" secondItem="vp0-0e-JUY" secondAttribute="trailing" id="uuo-s6-r6R"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bottomView" destination="vp0-0e-JUY" id="HWC-tO-1e4"/>
+                <outlet property="topView" destination="AOb-Og-H1Y" id="7Yz-zS-9yI"/>
+                <outlet property="topViewHeight" destination="BpP-zi-uO1" id="YFL-SL-ZuA"/>
+            </connections>
+            <point key="canvasLocation" x="52.5" y="223"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="post-#N" width="19" height="19"/>
+        <image name="post-@N" width="19" height="19"/>
+        <image name="tabbar-light" width="320" height="49"/>
+    </resources>
+</document>
